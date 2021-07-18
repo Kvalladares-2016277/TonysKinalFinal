@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kennethvalladares.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="299.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Menu.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="25.0" prefWidth="284.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#VentanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaProductos" text="Productos " />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaTipoPlato" text="TipoPlato" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaTipoEmpleado" text="TipoEmpleado" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tablas Combinadas ">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaServicios_has_Empleados" text="Servicios y Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaServicios_has_Platos" text="Servicios y Platos " />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaProductos_has_platos" text="productos y platos" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarAcercaDe" text="Progamador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

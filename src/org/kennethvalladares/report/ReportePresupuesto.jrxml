@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d99eccc5-0784-4dea-8684-eb19d47a1fa7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresasReporte($P{codigoEmpresa});]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="536">
+			<staticText>
+				<reportElement x="329" y="436" width="113" height="64" uuid="dca89100-7745-4f78-8038-c321f7c27907"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Luis Valladares  Gerente general ]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="186" splitType="Stretch">
+			<staticText>
+				<reportElement x="207" y="140" width="322" height="46" uuid="aab214db-f3c0-4b4f-affe-bf6b5487fb38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE  PRESUPUESTO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="207" y="185" width="322" height="1" forecolor="#FFCC33" uuid="32b00c94-7d02-4017-8f85-0496c835eefb"/>
+				<graphicElement>
+					<pen lineWidth="5.5" lineColor="#FF9900"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="284" height="46" uuid="d43eef60-9fb3-4020-9e66-9a7a621efcd4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de la empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="153" y="3" width="224" height="43" uuid="2b6944fb-02ac-4fff-a914-2ad4f86a25e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="43" width="284" height="46" uuid="c5dca834-3a4c-4dad-8849-a885179c4258"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Direccion de la empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="59" width="177" height="33" uuid="e0b0cdc6-2c37-4e59-8065-ce2d11923739"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="398" y="0" width="203" height="43" uuid="0a9983cc-f3e7-4745-aac5-afed37866a57"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telefono de la empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="585" y="3" width="128" height="43" uuid="229db61d-8b78-4b78-9ca2-38fb85389b6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="0" width="752" height="1" forecolor="#FFCC33" uuid="176c6e15-1cab-4949-b083-c7c28604bd7e"/>
+				<graphicElement>
+					<pen lineWidth="5.5" lineColor="#FF9900"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="54" y="11" width="88" height="45" uuid="2f43d1bd-64cf-476f-b1d3-2c06f8ca0deb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Solicitud ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="11" width="137" height="45" uuid="9b8a746f-2081-44f5-9547-d978e3e33769"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad presupuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="11" width="84" height="45" uuid="07b78a16-667c-45af-9ba8-bd942d307914"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora  Sevicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="651" y="11" width="85" height="45" uuid="b8e25238-16fd-49aa-b88f-69016ecb765c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="60" width="752" height="1" forecolor="#FFCC33" uuid="17f3f564-a713-4288-92b7-5b1445988fbb"/>
+				<graphicElement>
+					<pen lineWidth="5.5" lineColor="#FF9900"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="196" y="11" width="88" height="45" uuid="16d16e30-ebbc-49df-8ce9-a6d4819d799b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Servicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="42" y="14" width="111" height="20" uuid="7241d6be-030e-4833-8083-ebf6604d15d9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="344" y="14" width="112" height="20" uuid="b4604ccc-87a5-4a28-9972-305e1358427c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="628" y="14" width="108" height="20" uuid="711179b6-b97f-4c86-aa3f-381d66203a26"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="507" y="14" width="94" height="20" uuid="aa3f4c90-6745-451a-82ce-19f2e27de96b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="41" width="751" height="1" uuid="63d1087d-7f3a-4332-9e12-94dceb899839"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed" lineColor="#FF9900"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="196" y="14" width="100" height="20" uuid="5aa3956b-79da-4762-ac95-ad415e37814f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

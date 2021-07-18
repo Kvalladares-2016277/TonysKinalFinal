@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kennethvalladares.controller.ServicioController">
+   <children>
+      <Label layoutX="332.0" prefHeight="46.0" prefWidth="253.0" text="SERVICIOS " textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServicios" layoutX="67.0" layoutY="239.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="742.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPresupuesto" prefWidth="97.0" text="CodigoServicio " />
+            <TableColumn fx:id="colFechaServicio" prefWidth="84.0" text="FechaServicio" />
+            <TableColumn fx:id="colTipoServicio" prefWidth="136.0" text="TipoServicio" />
+            <TableColumn fx:id="colHoraServicio" prefWidth="107.0" text="HoraServicio" />
+            <TableColumn fx:id="colLugarServicio" prefWidth="100.0" text="lugarServicio" />
+            <TableColumn fx:id="colContacto" prefWidth="102.0" text="Contacto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="115.0" text="codigoEmpresa" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="66.0" layoutY="461.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="83.0" text="Nuevo">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="166.0" layoutY="461.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="46.0" prefWidth="83.0" text="Eliminar">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="264.0" layoutY="461.0" mnemonicParsing="false" onAction="#editar" prefHeight="46.0" prefWidth="83.0" text="Editar">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="361.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#generarReporte" prefHeight="46.0" prefWidth="83.0" text="Reporte">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtCodigoServicio" editable="false" layoutX="232.0" layoutY="59.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="119.0" layoutY="97.0" prefHeight="36.0" prefWidth="115.0" text="fechaServicio" textFill="#f8f5f5">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <Label layoutX="119.0" layoutY="145.0" prefHeight="36.0" prefWidth="133.0" text="tipoServicio" textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <Label layoutX="119.0" layoutY="184.0" prefHeight="36.0" prefWidth="115.0" text="horaServicio" textFill="#f2f0f0" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtTipoServicio" editable="false" layoutX="234.0" layoutY="151.0" prefHeight="25.0" prefWidth="170.0" />
+      <TextField fx:id="txtHoraServicio" editable="false" layoutX="232.0" layoutY="190.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="119.0" layoutY="54.0" prefHeight="36.0" prefWidth="115.0" text="codigo Servicio" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="504.0" layoutY="51.0" prefHeight="36.0" prefWidth="115.0" text="lugarServicio" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLugarServicio" editable="false" layoutX="622.0" layoutY="56.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="504.0" layoutY="97.0" prefHeight="36.0" prefWidth="115.0" text="telefono Contacto" textFill="#f8f5f5">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoServicio" editable="false" layoutX="622.0" layoutY="103.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="504.0" layoutY="145.0" prefHeight="36.0" prefWidth="133.0" text="codigoEmpresa" textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="726.0" layoutY="461.0" mnemonicParsing="false" onAction="#salir" prefHeight="46.0" prefWidth="83.0" text="Salir">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="78.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="458.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="458.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoDireccion.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="78.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoCalendario.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="77.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoHora.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="458.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoTelefono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="79.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoServicio.jpg" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="grpFechaServicio" layoutX="234.0" layoutY="100.0" prefHeight="30.0" prefWidth="170.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="622.0" layoutY="151.0" prefHeight="25.0" prefWidth="170.0" />
+      <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="24.0" layoutY="19.0" onMouseClicked="#VentanaEmpresas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Flecha.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

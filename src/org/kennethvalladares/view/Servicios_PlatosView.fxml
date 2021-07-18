@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kennethvalladares.controller.Servicios_has_PlatosController">
+   <children>
+      <Label layoutX="205.0" layoutY="14.0" prefHeight="46.0" prefWidth="336.0" text="SERVICIOS Y PLATOS " textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServiciosPlatos" layoutX="18.0" layoutY="161.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="240.0" prefWidth="710.0">
+         <columns>
+            <TableColumn fx:id="colServiciosCodigoServicio" prefWidth="364.0" text="Servicios  CodigoServicio " />
+            <TableColumn fx:id="colPlatosCodigoPlato" prefWidth="345.0" text="Platos CodigoPlato" />
+         </columns>
+      </TableView>
+      <Label layoutX="120.0" layoutY="103.0" prefHeight="36.0" prefWidth="142.0" text="Platos CodigoPlato" textFill="#f8f5f5">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <Label layoutX="120.0" layoutY="60.0" prefHeight="36.0" prefWidth="152.0" text="Servicios CodigoServicio" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="662.0" layoutY="413.0" mnemonicParsing="false" onAction="#salir" prefHeight="36.0" prefWidth="66.0" text="Salir">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="78.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="78.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbServicioCodigoServicio" layoutX="312.0" layoutY="66.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbPlatosCodigoPlato" layoutX="312.0" layoutY="109.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

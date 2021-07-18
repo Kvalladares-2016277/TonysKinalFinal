@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kennethvalladares.controller.EmpleadoController">
+   <children>
+      <Label layoutX="349.0" layoutY="14.0" prefHeight="46.0" prefWidth="240.0" text="EMPLEADOS" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="9.0" layoutY="237.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="200.0" prefWidth="995.0">
+         <columns>
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="105.0" text="CodigoEmpleado " />
+            <TableColumn fx:id="colNumeroEmpleado" prefWidth="108.0" text="NumeroEmpleado" />
+            <TableColumn fx:id="colApellidos" prefWidth="136.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="125.0" text="Nombres " />
+            <TableColumn fx:id="colDireccion" prefWidth="125.0" text="Direccion " />
+            <TableColumn fx:id="colTelefono" prefWidth="125.0" text="Télefono " />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="125.0" text="GradoCocinero " />
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="138.0" text="CodigoTipoEmpleado " />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="83.0" text="Nuevo">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="113.0" layoutY="461.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="46.0" prefWidth="83.0" text="Eliminar">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="211.0" layoutY="461.0" mnemonicParsing="false" onAction="#editar" prefHeight="46.0" prefWidth="83.0" text="Editar">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="308.0" layoutY="461.0" mnemonicParsing="false" onAction="#reporte" prefHeight="46.0" prefWidth="83.0" text="Reporte">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="712.0" layoutY="71.0" prefHeight="25.0" prefWidth="279.0" />
+      <Label layoutX="118.0" layoutY="101.0" prefHeight="36.0" prefWidth="115.0" text="numeroEmpleado" textFill="#f8f5f5">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <Label layoutX="118.0" layoutY="137.0" prefHeight="36.0" prefWidth="126.0" text="apellidos Empleado" textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <Label layoutX="118.0" layoutY="172.0" prefHeight="36.0" prefWidth="144.0" text="Nombres Empleado" textFill="#f2f0f0" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtNumeroEmpleado" editable="false" layoutX="256.0" layoutY="106.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="txtApellidosEmpleado" editable="false" layoutX="254.0" layoutY="142.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="txtNombreEmpleado" editable="false" layoutX="254.0" layoutY="177.0" prefHeight="25.0" prefWidth="215.0" />
+      <Label layoutX="118.0" layoutY="70.0" prefHeight="36.0" prefWidth="115.0" text="CodigoEmpleado" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="65.0" prefHeight="36.0" prefWidth="126.0" text="Direccion " textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="96.0" prefHeight="36.0" prefWidth="126.0" text="Télefono " textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="132.0" prefHeight="36.0" prefWidth="126.0" text="Grado Cocinero " textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="171.0" prefHeight="36.0" prefWidth="144.0" text="codigoTipoEmpleado " textFill="#f2eded">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpleado" editable="false" layoutX="256.0" layoutY="75.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="712.0" layoutY="106.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="712.0" layoutY="138.0" prefHeight="25.0" prefWidth="167.0" />
+      <Button fx:id="btnSalir" layoutX="920.0" layoutY="461.0" mnemonicParsing="false" onAction="#salir" prefHeight="46.0" prefWidth="83.0" text="Salir">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="72.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="72.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DatosPersonalesIcono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="72.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/DatosPersonalesIcono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="531.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IDicono%20.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="531.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoDireccion.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="531.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoTelefono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="72.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoCarnet.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="531.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoTipoCocinero.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#VentanaTipoEmpleado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Flecha.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoTipoEmpleado" layoutX="721.0" layoutY="178.0" prefHeight="25.0" prefWidth="177.0" />
+   </children>
+</AnchorPane>
